@@ -1,7 +1,16 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-require('dotenv').config({path:'./.env'})
+require('dotenv').config({ path: './.env' });
+const cors = require('cors');
+
+
+
+//Middleware
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 
 //Variáveis de ambiente
 const PASSWORD = process.env.PASSWORD;
