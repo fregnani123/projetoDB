@@ -14,12 +14,13 @@ const productSchema = new mongoose.Schema({
         default: 0.00,
     },
     categoria: {
-        type:String,
+        type: String,
+        required:true,
     },
     estoque: {
         type: Number,
-        default:0,
-    }
+        required:true,
+    },
 })
 
-module.exports = mongoose.model('Produto', productSchema)
+module.exports = mongoose.model('Produtos', productSchema)

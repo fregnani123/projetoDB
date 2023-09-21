@@ -3,13 +3,14 @@ const app = express();
 const mongoose = require('mongoose');
 require('dotenv').config({ path: './.env' });
 const cors = require('cors');
-
-
+const routes = require('../router/routes')
 
 //Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({extended: true }));
+
+app.use(routes)
 
 
 //Variáveis de ambiente
