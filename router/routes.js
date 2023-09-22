@@ -7,5 +7,5 @@ Router.get('/', (req, res) => {
 });
 Router.get('/produtos', controllers.findProduts);
 Router.post('/newProduct', controllers.createProduct);
-Router.get('/produtos/:id', controllers.findOne)
+Router.get('/produto/:id', controllers.findOne)
 module.exports = Router;
