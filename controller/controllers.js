@@ -16,5 +16,16 @@ module.exports = {
             console.log(error);
             return res.status(500).json({ error: 'Erro ao criar o usuário' });
         }
-    }
+    },
+
+    findOne: async (req, res) => {
+        const id = req.params.id;
+        try {
+            const user = await Produto.findOne({ _id: id });
+            res.json(user);
+        } catch (error) {
+            console.log(error);
+        }
+    },
+
 }
